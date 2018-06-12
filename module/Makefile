@@ -1,6 +1,5 @@
-obj-m+=FATx-vfs.o
-
-CFLAGS_FATx-vfs.o := -DDEBUG
+obj-m := src.o
+src-objs := fatx.o super.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
